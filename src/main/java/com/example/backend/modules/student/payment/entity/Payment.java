@@ -1,5 +1,6 @@
-package com.example.backend.modules.student.entity;
+package com.example.backend.modules.student.payment.entity;
 
+import com.example.backend.modules.student.entity.Student;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @Builder
-public class Payement {
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,9 +20,8 @@ public class Payement {
     private String code;
     private double amount;
     private Date date;
-    private PayementType type;
-    private PayementStatus status;
-    private boolean active;
+    private PaymentType type;
+    private PaymentStatus status;
     private String file;
     @ManyToOne
     private Student student;

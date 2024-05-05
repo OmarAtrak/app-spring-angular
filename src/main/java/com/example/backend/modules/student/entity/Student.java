@@ -1,5 +1,6 @@
 package com.example.backend.modules.student.entity;
 
+import com.example.backend.modules.student.payment.entity.Payment;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -25,8 +26,5 @@ public class Student {
     private String code;
     @NotNull
     private Long programId;
-    private boolean active;
     private String photo;
-    @OneToMany
-    private List<Payement> payements;
 }
